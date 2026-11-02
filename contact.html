@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Famous Barber | Sunnyside and Hatfield Branches</title>
+<meta name="description" content="Find Famous Barber on the map, check opening hours for Sunnyside and Hatfield, and send us a message by email.">
+<meta name="author" content="Nseketelo Sono">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1c1a17">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' mailto:; object-src 'none'">
+<link rel="canonical" href="https://famous-barber.netlify.app/contact.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Famous Barber">
+<meta property="og:title" content="Contact Famous Barber | Sunnyside and Hatfield Branches">
+<meta property="og:description" content="Find Famous Barber on the map, check opening hours for Sunnyside and Hatfield, and send us a message by email.">
+<meta property="og:url" content="https://famous-barber.netlify.app/contact.html">
+<meta property="og:image" content="https://famous-barber.netlify.app/images/hot-towel-finish-barber-pretoria.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c1a17'/%3E%3Cpath d='M9 4h14v24H9z' fill='%23f2e9d8'/%3E%3Cpath d='M9 8l14 6V9L9 3zm0 10l14 6v-5L9 13z' fill='%239c2b1f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@700;800&amp;family=Work+Sans:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HairSalon","name":"Famous Barber","url":"https://famous-barber.netlify.app/","image":"https://famous-barber.netlify.app/images/hot-towel-finish-barber-pretoria.jpg",
+"email":"bookings@famousbarber.co.za","priceRange":"R50-R230","areaServed":"Pretoria",
+"department":[
+{"@type":"HairSalon","name":"Famous Barber Sunnyside","telephone":"+27123456789","address":{"@type":"PostalAddress","streetAddress":"123 Esselen Street, Sunnyside","addressLocality":"Pretoria","postalCode":"0002","addressCountry":"ZA"},"geo":{"@type":"GeoCoordinates","latitude":-25.7540,"longitude":28.2030},"openingHours":["Mo-Fr 08:00-18:00","Sa 08:00-15:00"]},
+{"@type":"HairSalon","name":"Famous Barber Hatfield","telephone":"+27129876543","address":{"@type":"PostalAddress","streetAddress":"45 Grosvenor Street, Hatfield","addressLocality":"Pretoria","postalCode":"0028","addressCountry":"ZA"},"geo":{"@type":"GeoCoordinates","latitude":-25.7490,"longitude":28.2320},"openingHours":["Mo-Fr 09:00-19:00","Sa 08:00-15:00"]}]}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="index.html" aria-label="Famous Barber home">Famous <span>Barber</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav aria-label="Main navigation"><div class="nav-links" id="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="enquiry.html">Book / Enquire</a><a href="contact.html">Contact</a></div></nav>
+  </div>
+  <div class="striped-divider" aria-hidden="true"></div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Find us</span>
+    <h1>Contact Famous Barber</h1>
+    <p>Two branches, one standard. Walk-ins are always welcome, but booking ahead through our enquiry form guarantees your slot.</p>
+  </div>
+</section>
+
+<section aria-labelledby="loc-h">
+  <div class="container">
+    <h2 id="loc-h">Our branches</h2>
+    <div class="map-actions">
+      <button type="button" class="btn btn-outline btn-sm" data-fly="sunnyside">Show Sunnyside</button>
+      <button type="button" class="btn btn-outline btn-sm" data-fly="hatfield">Show Hatfield</button>
+      <button type="button" class="btn btn-sm" id="nearest">Find my nearest branch</button>
+    </div>
+    <p id="nearest-result" class="muted" role="status"></p>
+    <div id="map" role="region" aria-label="Map of Famous Barber branches in Pretoria"></div>
+    <noscript><p>Sunnyside: 123 Esselen Street. Hatfield: 45 Grosvenor Street, Pretoria.</p></noscript>
+
+    <div data-tabs style="margin-top:1.5rem">
+      <div class="tablist" role="tablist" aria-label="Branch details">
+        <button class="tab" role="tab" id="t-sun" data-branch="sunnyside" aria-selected="true" aria-controls="p-sun">Sunnyside</button>
+        <button class="tab" role="tab" id="t-hat" data-branch="hatfield" aria-selected="false" tabindex="-1" aria-controls="p-hat">Hatfield</button>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p-sun" aria-labelledby="t-sun">
+        <span class="tag">Original branch</span>
+        <h3>Famous Barber Sunnyside</h3>
+        <p>123 Esselen Street, Sunnyside, Pretoria, 0002<br><a href="tel:+27123456789">012 345 6789</a><br>Mon–Fri 08:00–18:00, Sat 08:00–15:00</p>
+      </div>
+      <div class="tabpanel" role="tabpanel" id="p-hat" aria-labelledby="t-hat" hidden>
+        <span class="tag">Second branch</span>
+        <h3>Famous Barber Hatfield</h3>
+        <p>45 Grosvenor Street, Hatfield, Pretoria, 0028<br><a href="tel:+27129876543">012 987 6543</a><br>Mon–Fri 09:00–19:00, Sat 08:00–15:00</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" aria-labelledby="msg-h">
+  <div class="container">
+    <h2 id="msg-h">Send us a message</h2>
+    <p class="muted">Use this form for general questions, feedback, careers or partnerships. To book a haircut, use the <a href="enquiry.html">enquiry form</a>.</p>
+    <form id="contact-form" class="form-card" method="post" action="#" novalidate>
+      <div class="field-row">
+        <div class="field"><label for="cName">Your name</label>
+          <input type="text" id="cName" name="name" data-rule="name" data-label="Your name" required minlength="2" maxlength="60" autocomplete="name">
+          <div class="error-msg" aria-live="polite"></div></div>
+        <div class="field"><label for="cEmail">Email address</label>
+          <input type="email" id="cEmail" name="email" data-rule="email" data-label="Email" required maxlength="100" autocomplete="email">
+          <div class="error-msg" aria-live="polite"></div></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="cPhone">Phone <span class="hint">(optional)</span></label>
+          <input type="tel" id="cPhone" name="phone" data-rule="phone" data-label="Phone" autocomplete="tel" placeholder="082 123 4567">
+          <div class="error-msg" aria-live="polite"></div></div>
+        <div class="field"><label for="cTopic">Type of message</label>
+          <select id="cTopic" name="topic" data-label="A message type" required><option value="">Select a type</option><option>General question</option><option>Feedback</option><option>Complaint</option><option>Careers</option><option>Partnership / sponsorship</option></select>
+          <div class="error-msg" aria-live="polite"></div></div>
+      </div>
+      <div class="field"><label for="cSubject">Subject</label>
+        <input type="text" id="cSubject" name="subject" data-label="Subject" required minlength="3" maxlength="80">
+        <div class="error-msg" aria-live="polite"></div></div>
+      <div class="field"><label for="cMessage">Message</label>
+        <textarea id="cMessage" name="message" rows="6" data-label="Your message" required minlength="20" maxlength="1000" data-counter="c-count"></textarea>
+        <div class="hint" id="c-count"></div><div class="error-msg" aria-live="polite"></div></div>
+      <div class="honeypot" aria-hidden="true"><label>Leave blank <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <button type="submit" class="btn">Prepare Email</button>
+      <div id="contact-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+      <div id="email-preview" hidden>
+        <h3>Your email</h3>
+        <p><strong>To:</strong> <span id="email-to"></span><br><strong>Subject:</strong> <span id="email-subject"></span></p>
+        <div class="email-preview" id="email-body"></div>
+        <a id="send-email" class="btn" href="#">Send email</a>
+      </div>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h2>Famous Barber</h2><p>Proper cuts at honest prices in Pretoria. Two branches: Sunnyside and Hatfield.</p></div>
+      <div><h2>Visit us</h2><ul>
+        <li>123 Esselen Street, Sunnyside</li><li>45 Grosvenor Street, Hatfield</li>
+        <li><a href="tel:+27123456789">012 345 6789</a></li>
+        <li><a href="mailto:bookings@famousbarber.co.za">bookings@famousbarber.co.za</a></li></ul></div>
+      <div><h2>Explore</h2><ul>
+        <li><a href="services.html">Services &amp; prices</a></li><li><a href="enquiry.html">Book a cut</a></li>
+        <li><a href="about.html#gallery">Gallery</a></li><li><a href="contact.html">Find a branch</a></li></ul></div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Famous Barber. Website by Nseketelo Sono.</p>
+  </div>
+</footer>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/map.js" defer></script>
+<script src="js/forms.js" defer></script>
+
+</body>
+</html>

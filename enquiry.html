@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book a Haircut in Pretoria | Famous Barber Enquiry</title>
+<meta name="description" content="Book a haircut, beard trim or shave at Famous Barber Sunnyside or Hatfield. Get an instant price estimate and available times.">
+<meta name="author" content="Nseketelo Sono">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1c1a17">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' mailto:; object-src 'none'">
+<link rel="canonical" href="https://famous-barber.netlify.app/enquiry.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Famous Barber">
+<meta property="og:title" content="Book a Haircut in Pretoria | Famous Barber Enquiry">
+<meta property="og:description" content="Book a haircut, beard trim or shave at Famous Barber Sunnyside or Hatfield. Get an instant price estimate and available times.">
+<meta property="og:url" content="https://famous-barber.netlify.app/enquiry.html">
+<meta property="og:image" content="https://famous-barber.netlify.app/images/hot-towel-finish-barber-pretoria.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c1a17'/%3E%3Cpath d='M9 4h14v24H9z' fill='%23f2e9d8'/%3E%3Cpath d='M9 8l14 6V9L9 3zm0 10l14 6v-5L9 13z' fill='%239c2b1f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@700;800&amp;family=Work+Sans:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="index.html" aria-label="Famous Barber home">Famous <span>Barber</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav aria-label="Main navigation"><div class="nav-links" id="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="enquiry.html">Book / Enquire</a><a href="contact.html">Contact</a></div></nav>
+  </div>
+  <div class="striped-divider" aria-hidden="true"></div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Bookings</span>
+    <h1>Book / Enquire</h1>
+    <p>Choose a service, branch and date. We will show you the cost and available times straight away, then confirm your appointment. Prefer to talk? Call 012 345 6789.</p>
+  </div>
+</section>
+
+<section aria-labelledby="enq-h">
+  <div class="container">
+    <h2 id="enq-h">Appointment enquiry</h2>
+    <form id="enquiry-form" class="form-card" method="post" action="#" novalidate>
+      <div class="field-row">
+        <div class="field"><label for="fullName">Full name</label>
+          <input type="text" id="fullName" name="fullName" data-rule="name" data-label="Full name" required minlength="2" maxlength="60" autocomplete="name" placeholder="e.g. Thabo Mokoena">
+          <div class="error-msg" aria-live="polite"></div></div>
+        <div class="field"><label for="contactDetail">Phone or email</label>
+          <input type="text" id="contactDetail" name="contactDetail" data-rule="phoneOrEmail" data-label="Contact details" required maxlength="80" autocomplete="tel" placeholder="082 000 0000 or you@email.com">
+          <div class="error-msg" aria-live="polite"></div></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="branch">Preferred branch</label>
+          <select id="branch" name="branch" data-label="A branch" required><option value="">Select a branch</option><option value="sunnyside">Sunnyside</option><option value="hatfield">Hatfield</option><option value="either">Either is fine</option></select>
+          <div class="error-msg" aria-live="polite"></div></div>
+        <div class="field"><label for="service">Preferred service</label>
+          <select id="service" name="service" data-label="A service" required><option value="">Select a service</option></select>
+          <div class="error-msg" aria-live="polite"></div></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label for="barber">Preferred barber <span class="hint">(optional)</span></label>
+          <select id="barber" name="barber"><option value="">No preference</option><option>Onthathile Phalatse</option><option>Nhlanhla Mkhwanazi</option><option>Justice Madlanga</option><option>Moshate Verk</option></select>
+          <div class="error-msg"></div></div>
+        <div class="field"><label for="preferredDate">Preferred date</label>
+          <input type="date" id="preferredDate" name="preferredDate" data-label="A date" required>
+          <div class="error-msg" aria-live="polite"></div></div>
+      </div>
+      <div class="field"><label for="message">Anything else? <span class="hint">(optional)</span></label>
+        <textarea id="message" name="message" rows="4" maxlength="300" data-counter="msg-count" data-label="Your note" placeholder="e.g. preferred time of day, first visit"></textarea>
+        <div class="hint" id="msg-count"></div><div class="error-msg" aria-live="polite"></div></div>
+      <div class="honeypot" aria-hidden="true"><label>Leave blank <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      <button type="submit" class="btn">Send Enquiry</button>
+      <div id="form-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h2>Famous Barber</h2><p>Proper cuts at honest prices in Pretoria. Two branches: Sunnyside and Hatfield.</p></div>
+      <div><h2>Visit us</h2><ul>
+        <li>123 Esselen Street, Sunnyside</li><li>45 Grosvenor Street, Hatfield</li>
+        <li><a href="tel:+27123456789">012 345 6789</a></li>
+        <li><a href="mailto:bookings@famousbarber.co.za">bookings@famousbarber.co.za</a></li></ul></div>
+      <div><h2>Explore</h2><ul>
+        <li><a href="services.html">Services &amp; prices</a></li><li><a href="enquiry.html">Book a cut</a></li>
+        <li><a href="about.html#gallery">Gallery</a></li><li><a href="contact.html">Find a branch</a></li></ul></div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Famous Barber. Website by Nseketelo Sono.</p>
+  </div>
+</footer>
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/forms.js" defer></script>
+
+</body>
+</html>

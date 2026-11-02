@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Barber Services and Prices in Pretoria | Famous Barber</title>
+<meta name="description" content="Search and sort Famous Barber prices: haircuts from R50, beard trims, hot towel shaves and combos. Upfront pricing at Sunnyside and Hatfield.">
+<meta name="author" content="Nseketelo Sono">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1c1a17">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https://tile.openstreetmap.org https://unpkg.com; connect-src 'self' https://formspree.io; base-uri 'self'; form-action 'self' mailto:; object-src 'none'">
+<link rel="canonical" href="https://famous-barber.netlify.app/services.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Famous Barber">
+<meta property="og:title" content="Barber Services and Prices in Pretoria | Famous Barber">
+<meta property="og:description" content="Search and sort Famous Barber prices: haircuts from R50, beard trims, hot towel shaves and combos. Upfront pricing at Sunnyside and Hatfield.">
+<meta property="og:url" content="https://famous-barber.netlify.app/services.html">
+<meta property="og:image" content="https://famous-barber.netlify.app/images/hot-towel-finish-barber-pretoria.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c1a17'/%3E%3Cpath d='M9 4h14v24H9z' fill='%23f2e9d8'/%3E%3Cpath d='M9 8l14 6V9L9 3zm0 10l14 6v-5L9 13z' fill='%239c2b1f'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@700;800&amp;family=Work+Sans:wght@400;600&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="container nav-bar">
+    <a class="brand" href="index.html" aria-label="Famous Barber home">Famous <span>Barber</span></a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
+    <nav aria-label="Main navigation"><div class="nav-links" id="nav-links"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="enquiry.html">Book / Enquire</a><a href="contact.html">Contact</a></div></nav>
+  </div>
+  <div class="striped-divider" aria-hidden="true"></div>
+</header>
+<main id="main">
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Price list</span>
+    <h1>Services &amp; Prices</h1>
+    <p>Every price is upfront, no surprises in the chair. All services include a consultation, wash and style finish.</p>
+  </div>
+</section>
+
+<section aria-labelledby="list-h">
+  <div class="container">
+    <h2 id="list-h">Find your service</h2>
+    <form class="toolbar" role="search" onsubmit="return false" aria-label="Search and filter services">
+      <div><label for="search">Search</label><input type="search" id="search" placeholder="e.g. fade, beard, kids" autocomplete="off"></div>
+      <div><label for="category">Category</label><select id="category"><option value="">All categories</option></select></div>
+      <div><label for="sort">Sort by</label>
+        <select id="sort"><option value="default">Featured</option><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="name">Name A–Z</option></select></div>
+    </form>
+    <p id="result-count" class="result-count" role="status" aria-live="polite"></p>
+    <ul id="service-list" class="grid grid-3"></ul>
+    <div id="no-results" class="empty" hidden><p>No services match your search.</p><button type="button" id="reset-filters" class="btn btn-outline btn-sm">Clear filters</button></div>
+    <noscript><p>Please enable JavaScript to browse the price list, or call 012 345 6789 for prices.</p></noscript>
+  </div>
+</section>
+
+<section class="alt" aria-labelledby="fades-h">
+  <div class="container split">
+    <div><h2 id="fades-h">Fades done right</h2>
+      <p>From skin fades to classic tapers, every cut starts with a proper consultation so you leave with exactly what you asked for.</p>
+      <a href="enquiry.html" class="btn">Book a Service</a></div>
+    <img class="figure-img" src="images/beard-trim-hairline-barbershop.jpg" width="738" height="414" loading="lazy" alt="Barber trimming a client's beard and hairline in the shop">
+  </div>
+</section>
+
+<dialog id="service-modal" aria-labelledby="modal-title">
+  <div class="dialog-body">
+    <button class="dialog-close" type="button" aria-label="Close details">&times;</button>
+    <h2 id="modal-title"></h2>
+    <p class="m-desc"></p>
+    <p><span class="price m-price"></span> · <span class="m-time muted"></span></p>
+    <a class="btn m-book" href="enquiry.html">Book this service</a>
+  </div>
+</dialog>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div><h2>Famous Barber</h2><p>Proper cuts at honest prices in Pretoria. Two branches: Sunnyside and Hatfield.</p></div>
+      <div><h2>Visit us</h2><ul>
+        <li>123 Esselen Street, Sunnyside</li><li>45 Grosvenor Street, Hatfield</li>
+        <li><a href="tel:+27123456789">012 345 6789</a></li>
+        <li><a href="mailto:bookings@famousbarber.co.za">bookings@famousbarber.co.za</a></li></ul></div>
+      <div><h2>Explore</h2><ul>
+        <li><a href="services.html">Services &amp; prices</a></li><li><a href="enquiry.html">Book a cut</a></li>
+        <li><a href="about.html#gallery">Gallery</a></li><li><a href="contact.html">Find a branch</a></li></ul></div>
+    </div>
+    <p class="footer-bottom">&copy; 2026 Famous Barber. Website by Nseketelo Sono.</p>
+  </div>
+</footer>
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+<script src="js/services.js" defer></script>
+
+</body>
+</html>
